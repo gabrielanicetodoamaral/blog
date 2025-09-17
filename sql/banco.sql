@@ -28,3 +28,6 @@ CREATE TABLE post (
 );
 
 SELECT * FROM post;
+SELECT * FROM usuario;
+
+UPDATE `blog`.`usuario` SET `ativo`='1', `adm`='1' WHERE `id`='1';
