@@ -29,6 +29,7 @@
           <h2>Página Inicial</h2>
           <?php
             include 'includes/busca.php';
+            date_default_timezone_set('America/Sao_Paulo');
           ?>
         </div>
       </div>
@@ -38,12 +39,7 @@
         require_once 'core/conexao_mysql.php';
         require_once 'core/sql.php';
         require_once 'core/mysql.php';
-      ?>
-    </div>
-  </body>
-</html>
-
-<?php
+     
 foreach($_GET as $indice => $dado){
     $$indice = limparDados($dado);
 }

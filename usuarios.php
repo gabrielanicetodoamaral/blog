@@ -42,15 +42,8 @@
                     if(!empty($busca)){
                         $criterio[] = ['nome', 'like', "%{$busca}%"];
                     }
-                ?>
-            </div>
-        </div>
-    </div>
-</body>
-</html>
 
-<?php
-$result = buscar(
+                    $result = buscar(
                         'usuario',
                         [
                             'id',
@@ -103,7 +96,9 @@ $result = buscar(
         </div>
         <div class="row">
             <div class="col-md-12">
-                <?php include 'includes/rodape.php'; ?>
+                <?php
+                    include 'includes/rodape.php'; 
+                 ?>
             </div>
         </div>
     </div>

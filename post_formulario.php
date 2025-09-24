@@ -2,7 +2,8 @@
 <html>
   <head>
     <title>Post | Projeto para Web com PHP</title>
-    <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" 
+          href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
   </head>
   <body>
     <div class="container">
@@ -14,13 +15,10 @@
           ?>
         </div>
       </div>
-
       <div class="row" style="min-height: 500px;">
         <div class="col-md-12">
           <?php include 'includes/menu.php'; ?>
         </div>
-      </div>
-
       <div class="col-md-10" style="padding-top: 50px;">
         <?php
           require_once 'includes/funcoes.php';
@@ -29,14 +27,8 @@
           require_once 'core/mysql.php';
 
           foreach($_GET as $indice => $dado){
-            $dado = limparDados($dado);
+            $$indice = limparDados($dado);
           }
-        ?>
-      </div>
-    </div>
-  </body>
-</html>
-<?php
   if(!empty($id)){
     $id = (int)$id;
 
@@ -71,9 +63,7 @@
   <div class="form-group">
     <label for="texto">Texto</label>
     <textarea class="form-control" type="text"
-              required="required" id="texto" name="texto" rows="5">
-      <?php echo $entidade['texto'] ?? '' ?>
-    </textarea>
+              required="required" id="texto" name="texto" rows="5"><?php echo $entidade['texto'] ?? '' ?></textarea>
   </div>
 
 <div class="form-group">
