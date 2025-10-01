@@ -53,7 +53,7 @@ $criterio = [
 if (!empty($busca)) {
     $criterio[] = [
         'AND',
-        'texto',
+        'data_postagem',
         'like',
         "%{$busca}%"
     ];
